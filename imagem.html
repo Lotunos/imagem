@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Canvas <CODE/></title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #0b0c10;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    canvas {
+      transform: rotate(-5deg);
+      border-radius: 12px;
+      box-shadow: 10px 10px 30px rgba(0, 255, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <canvas id="codeCanvas" width="600" height="400"></canvas>
+
+  <script>
+    const canvas = document.getElementById('codeCanvas');
+    const ctx = canvas.getContext('2d');
+
+    // Fundo do painel
+    ctx.fillStyle = '#2C3E50';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Linhas verdes inclinadas
+    //linha 1
+    const xStart = 2;
+    const xEnd = xStart + 5;
+    ctx.beginPath();
+    ctx.moveTo(xStart, 0);
+    ctx.lineTo(xEnd, canvas.height);
+    ctx.strokeStyle = 'lime';
+    ctx.lineWidth = 2;
+    ctx.shadowColor = 'lime';
+    ctx.shadowBlur = 8;
+    ctx.stroke();
+    //linha 2
+    const xStart2 = 60;
+    const xEnd2 = xStart2 + 20;
+    ctx.beginPath();
+    ctx.moveTo(xStart2, 0);
+    ctx.lineTo(xEnd2, canvas.height);
+    ctx.strokeStyle = 'lime';
+    ctx.lineWidth = 2;
+    ctx.shadowColor = 'lime';
+    ctx.shadowBlur = 8;
+    ctx.stroke();
+    //linha 3
+    const xStart3 = 120;
+    const xEnd3 = xStart3 + 80;
+    ctx.beginPath();
+    ctx.moveTo(xStart3, 0);
+    ctx.lineTo(xEnd3, canvas.height);
+    ctx.strokeStyle = 'lime';
+    ctx.lineWidth = 2;
+    ctx.shadowColor = 'lime';
+    ctx.shadowBlur = 8;
+    ctx.stroke();
+    //linha 4
+    const xStart4 = 180;
+    const xEnd4 = xStart4 + 0;
+    ctx.beginPath();
+    ctx.moveTo(xStart4, 0);
+    ctx.lineTo(xEnd4, canvas.height);
+    ctx.strokeStyle = 'lime';
+    ctx.lineWidth = 2;
+    ctx.shadowColor = 'lime';
+    ctx.shadowBlur = 8;
+    ctx.stroke();
+    //linha 5
+    const xStart5 = 240;
+    const xEnd5 = xStart5 + 20;
+    ctx.beginPath();
+    ctx.moveTo(xStart5, 0);
+    ctx.lineTo(xEnd5, canvas.height);
+    ctx.strokeStyle = 'lime';
+    ctx.lineWidth = 2;
+    ctx.shadowColor = 'lime';
+    ctx.shadowBlur = 8;
+    ctx.stroke();
+    //linha 6
+    const xStart6 = 300;
+    const xEnd6 = xStart6 + 60;
+    ctx.beginPath();
+    ctx.moveTo(xStart6, 0);
+    ctx.lineTo(xEnd6, canvas.height);
+    ctx.strokeStyle = 'lime';
+    ctx.lineWidth = 2;
+    ctx.shadowColor = 'lime';
+    ctx.shadowBlur = 8;
+    ctx.stroke();
+    //linha 7
+    const xStart7 = 360;
+    const xEnd7 = xStart7 + 40;
+    ctx.beginPath();
+    ctx.moveTo(xStart7, 0);
+    ctx.lineTo(xEnd7, canvas.height);
+    ctx.strokeStyle = 'lime';
+    ctx.lineWidth = 2;
+    ctx.shadowColor = 'lime';
+    ctx.shadowBlur = 8;
+    ctx.stroke();
+    //linha 8
+    const xStart8 = 420;
+    const xEnd8 = xStart8 + 105;
+    ctx.beginPath();
+    ctx.moveTo(xStart8, 0);
+    ctx.lineTo(xEnd8, canvas.height);
+    ctx.strokeStyle = 'lime';
+    ctx.lineWidth = 2;
+    ctx.shadowColor = 'lime';
+    ctx.shadowBlur = 8;
+    ctx.stroke();
+    //linha 9
+    const xStart9 = 480;
+    const xEnd9 = xStart9 + 60;
+    ctx.beginPath();
+    ctx.moveTo(xStart9, 0);
+    ctx.lineTo(xEnd9, canvas.height);
+    ctx.strokeStyle = 'lime';
+    ctx.lineWidth = 2;
+    ctx.shadowColor = 'lime';
+    ctx.shadowBlur = 8;
+    ctx.stroke();
+    //linha 10
+    const xStart10 = 540;
+    const xEnd10 = xStart10 + 15;
+    ctx.beginPath();
+    ctx.moveTo(xStart10, 0);
+    ctx.lineTo(xEnd10, canvas.height);
+    ctx.strokeStyle = 'lime';
+    ctx.lineWidth = 2;
+    ctx.shadowColor = 'lime';
+    ctx.shadowBlur = 8;
+    ctx.stroke();
+
+
+    // Texto central
+    ctx.font = 'bold 72px monospace';
+    ctx.fillStyle = 'lime';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.shadowColor = 'lime';
+    ctx.shadowBlur = 10;
+    ctx.fillText('<CODE/>', canvas.width / 2, canvas.height / 2);
+  </script>
+</body>
+</html>
+
