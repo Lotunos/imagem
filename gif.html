@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Loop de Imagens com Canvas</title>
+  <style>
+    canvas {
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="meuCanvas" width="600" height="400"></canvas>
+
+  <script>
+    const canvas = document.getElementById('meuCanvas');
+    const ctx = canvas.getContext('2d');
+
+    // Lista de imagens (coloque os arquivos na mesma pasta do HTML)
+    const imagens = ['imagem1.png', 'imagem2.png','imagem3.png','imagem4.png','imagem5.png','imagem6.png']; // adicione mais se quiser
+    let indiceAtual = 0;
+
+    function trocarImagem() {
+      const img = new Image();
+      img.src = imagens[indiceAtual];
+      img.onload = () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+      };
+
+      // Avança para a próxima imagem, voltando ao início se necessário
+      indiceAtual = (indiceAtual + 1) % imagens.length;
+    }
+
+    // Troca a imagem a cada 0.1 segundo (1000 ms)
+    setInterval(trocarImagem, 100);
+
+    // Exibe a primeira imagem imediatamente
+    trocarImagem();
+  </script>
+</body>
+</html>
